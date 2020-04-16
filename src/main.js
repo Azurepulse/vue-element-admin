@@ -19,6 +19,10 @@ import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
 
+//引入bus
+import bus from "@/utils/Bus"
+Vue.use(bus);
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
