@@ -4,50 +4,55 @@
       <el-row :gutter="20">
         <el-row :span="6" :xs="24" :offset="6">
           <h2>
-            {{clickMeAppend}}
+            {{ clickMeAppend }}
           </h2>
-          <child-a></child-a>
-          <child-b></child-b>
+          <child-a />
+          <child-b />
         </el-row>
 
         <el-col :span="6" :xs="24">
-          <user-card :user="user"/>
+          <user-card :user="user" />
         </el-col>
 
         <el-col :span="18" :xs="24">
           <el-card>
             <el-tabs v-model="activeTab">
               <el-tab-pane label="Activity" name="activity">
-                <activity/>
+                <activity />
               </el-tab-pane>
               <el-tab-pane label="Timeline" name="timeline">
-                <timeline/>
+                <timeline />
               </el-tab-pane>
               <el-tab-pane label="Account" name="account">
-                <account :user="user"/>
+                <account :user="user" />
               </el-tab-pane>
             </el-tabs>
           </el-card>
         </el-col>
 
       </el-row>
+      <el-row>
+        <el-col :span="6">
+          <el-button type="primary">点我</el-button>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
 
 <script>
-  import {mapGetters} from 'vuex'
+  import { mapGetters } from 'vuex';
   import UserCard from '@/views/profile/components/UserCard';
   import Activity from '@/views/profile/components/Activity';
   import Timeline from '@/views/profile/components/Timeline';
   import Account from '@/views/profile/components/Account';
   import childA from '@/views/Test-3-20/childA';
   import childB from '@/views/Test-3-20/childB';
-  import {quickSort, Witcher} from "@/utils/Test-3-26";
+  import { quickSort, Witcher } from '@/utils/Test-3-26';
   // import Functional from "@/components/Test-3-20/Functional";
 
   export default {
-    name: 'myTest',
+    name: 'MyTest',
     components: {
       // Functional,
       childA, childB,
@@ -56,15 +61,15 @@
     provide() {
       return {
         h2: this
-      }
+      };
     },
     data() {
       return {
         user: {},
         activeTab: 'activity',
-        clickMe: "点我！！",
-        fullAppend: "",
-      }
+        clickMe: '点我！！',
+        fullAppend: ''
+      };
     },
     computed: {
       ...mapGetters([
@@ -82,7 +87,7 @@
       const witcher = new Witcher();
       Witcher.target = [];
       console.info(witcher);
-      console.info(Witcher,this.roles);
+      console.info(Witcher, this.roles);
       console.info(Witcher.target);
       console.info(witcher.target);
     },
@@ -93,10 +98,10 @@
           role: this.roles.join(' | '),
           email: 'admin@test.com',
           avatar: this.avatar
-        }
+        };
       }
     }
-  }
+  };
 </script>
 <style scoped lang="scss">
   /*禁止选中文本 仅作mixin*/

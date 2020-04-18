@@ -53,11 +53,11 @@ module.exports = {
       'after': true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': [2, 2, {
+    'indent': [0, 2, {
       'SwitchCase': 1
     }],
-    'jsx-quotes': [2, 'prefer-single'],
-    'key-spacing': [2, {
+    'jsx-quotes': [0, 'prefer-single'],
+    'key-spacing': [1, {
       'beforeColon': false,
       'afterColon': true
     }],
@@ -166,7 +166,7 @@ module.exports = {
       'avoidEscape': true,
       'allowTemplateLiterals': true
     }],
-    'semi': [2, 'never'],
+    'semi': [1, 'always'],
     'semi-spacing': [2, {
       'before': false,
       'after': true
