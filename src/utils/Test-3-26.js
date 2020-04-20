@@ -93,6 +93,7 @@ chainWebpack: config => {
 
  */
 
+/*
 // 引入terser插件
 const TerserPlugin = require('terser-webpack-plugin');
 // 使用configureWebpack字段配置webpack
@@ -123,3 +124,4 @@ module.exports = {
     })]);
   }
 };
+*/
